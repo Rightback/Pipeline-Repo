@@ -1,0 +1,9 @@
+FROM tomcat:8.0
+MAINTAINER agk
+EXPOSE 8080
+#COPY ./wwp-1.0.0.war /usr/local/tomcat/webapps
+RUN apt-get update && apt-get install -y vim \
+   && sed -i '44d' /usr/local/tomcat/conf/tomcat-users.xml \
+   && echo '  <role rolename="manager-gui"/>' >> /usr/local/tomcat/conf/tomcat-users.xml \
+   && echo '  <user username="deployer" password="deployerjj" roles="manager-gui,manager-script,manager-jmx"/>' >> /usr/local/tomcat/conf/tomcat-users.xml \
+   && echo '</tomcat-users>' >> /usr/local/tomcat/conf/tomcat-users.xml \
