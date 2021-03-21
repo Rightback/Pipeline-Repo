@@ -1,20 +1,10 @@
-Pipeline {
-  agent any
-  stages {
-    stage('setup') {
-       steps {
-          echo 'setup stage'
-       }
-    }   
-    stage('scan') {
-       steps {
-          echo 'scan stage'
-       }
+pipeline {
+    agent any
+    stages { 
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
-    stage('build') {
-        steps {
-	  echo 'build stage'
-	}
-    }
-  }
 }
