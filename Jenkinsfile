@@ -2,7 +2,7 @@ pipeline {
     agent {
         dockerfile {
 	    filename 'Dockerfiler'
-	    label 'AWS1'
+	    label 'AWS2'
 	}
     }
     stages { 
