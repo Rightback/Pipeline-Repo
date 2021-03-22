@@ -17,13 +17,12 @@ pipeline {
                 echo 'Test Stage'
             }
         }
-	stage ('Deploy') {
+	stage('Deploy') {
             steps{
                 sshagent(credentials : ['962e8e0f-0275-4e54-a1b8-324001e86113']) {
                     sh 'scp /home/dockeruser/testpipeline ec2-user@34.229.57.228:/home/ec2-user'
                 }
             } 
-	}
-       
+	}   
     }
 }
