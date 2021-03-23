@@ -14,14 +14,5 @@ pipeline {
                 echo 'Test Stage'
             }
         }
-	stage('Deploy') {
-            steps{
-                sshagent(['962e8e0f-0275-4e54-a1b8-324001e86113']) {
-		    sh 'pwd'
-		    sh 'ssh -o StrictHostKeyChecking=no ec2-user@34.229.57.228 uptime'
-                    sh 'scp -r * ec2-user@34.229.57.228:/home/ec2-user'
-                }
-            } 
-	}   
     }
 }
