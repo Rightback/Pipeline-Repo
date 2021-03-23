@@ -9,7 +9,7 @@ pipeline {
         stage('Scan') {
             steps {
                 echo 'Scan Stage'
-		sh 'pwd'
+		sh 'sfdx scanner:run --target "**/default/**" --format "csv" --outfile "pathToFile.csv"'
             }
         }
         stage('Test') {
