@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        dockerfile true	
+        dockerfile {
+	    filename 'Dockerfiler'
+	    label 'AWS2'
+	}
     }
     stages { 
         stage('Scan') {
