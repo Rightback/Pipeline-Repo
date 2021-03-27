@@ -8,7 +8,9 @@ pipeline {
         stage('Scan') {
             steps {
                 echo 'Scan Stage'
-//		sh 'sfdx scanner:run --target "**/default/**" --format "csv" --outfile "pathToFile.csv"'
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'sfdx scanner:run --target "./testfiles/*" --pmdconfig "./rule/apex_rulesett.xml"'
             }
         }
         stage('Test') {
