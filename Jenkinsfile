@@ -11,7 +11,6 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'sfdx scanner:run --target "./testfiles/*" --pmdconfig "./rule/apex_rulesett.xml"'
-//		sh 'sfdx scanner:run --target "./testfiles/*"
             }
         }
         stage('Test') {
