@@ -10,10 +10,10 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     echo "hello world"
-		    if grep -q 'type="4"' "./testresults.xml"; then
+		    if grep -q 'type="4"' "./rule/apex_rulesett.xml"; then
                     #exit1
                     echo 'violation1'
-                    elif grep -q 'type="3"' "./testresults.xml"; then
+                    elif grep -q 'type="3"' "./rule/apex_rulesett.xml; then
                     echo 'violation4'
                     else
                     echo 'we good'
