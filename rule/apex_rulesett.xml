@@ -542,5 +542,6 @@
    </rule>
    <!-- <rule ref="category/apex/bestpractices.xml/UnusedLocalVariable"/> -->
    <!-- <rule ref="category/apex/errorprone.xml/OverrideBothEqualsAndHashcode" /> -->
-
+    type="4"
+    type="3" 
 </ruleset>
