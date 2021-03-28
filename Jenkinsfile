@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label AWS2
+        label 'AWS2'
     }
     stages {
 	    stage(check) {
