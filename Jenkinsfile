@@ -6,6 +6,7 @@ pipeline {
         stage(check) {
             steps {
 	        sh 'pwd'
+		sh 'ls -la'
                 sh '''
                     #!/bin/bash
                     echo "hello world"
