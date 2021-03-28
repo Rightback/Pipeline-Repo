@@ -3,7 +3,7 @@ pipeline {
         docker {
             image 'sfvaimage1'
 	    registryUrl 'https://hub.docker.com/'
-	    registryCredentiaId  '37909e5b-3e72-47ff-82de-986cbf3ab573'
+	    registryCredentialsId '37909e5b-3e72-47ff-82de-986cbf3ab573'
         }
     }    
     stages { 
