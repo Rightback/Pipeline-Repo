@@ -21,6 +21,7 @@ pipeline {
 		    exit 1
                     else
                     echo 'rule check okay'
+		    rm -rf testresult.xml
                     #exit 0
                     fi
                 '''
