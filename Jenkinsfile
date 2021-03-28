@@ -1,6 +1,5 @@
 pipeline {
-    agent {
-    }
+    agent none
     stages {
 	    stage(check) {
             steps {
