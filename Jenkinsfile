@@ -5,7 +5,7 @@ pipeline {
     stages {
 	    stage(check) {
             steps {
-                bash '''
+                sh '''
                     #!/bin/bash
                     echo "hello world"
                 '''
