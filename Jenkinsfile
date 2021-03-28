@@ -13,7 +13,7 @@ pipeline {
 		    if grep -q 'type="4"' "./rule/apex_rulesett.xml"; then
                     #exit1
                     echo 'violation1'
-                    elif grep -q 'type="3"' "./rule/apex_rulesett.xml; then
+                    elif grep -q 'type="3"' "./rule/apex_rulesett.xml"; then
                     echo 'violation4'
                     else
                     echo 'we good'
