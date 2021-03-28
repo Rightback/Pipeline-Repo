@@ -9,11 +9,14 @@ pipeline {
 		sh 'ls -la'
                 sh '''
                     #!/bin/bash
-                    echo "hello world"
+                    touch testresult.xml
+                    #echo "hello world"
 		    if grep -q 'type="9"' "./rule/apex_rulesett.xml"; then
+		    rm -rf testresult.xml
                     exit 1
                     #echo 'violation1'
-                    elif grep -q 'type="9"' "./rule/apex_rulesett.xml"; then
+                    elif grep -q 'type="3"' "./rule/apex_rulesett.xml"; then
+		    rm -rf testresult.xml
                     #echo 'violation4'
 		    exit 1
                     else
