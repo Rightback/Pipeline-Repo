@@ -1,9 +1,9 @@
 pipeline {
     agent {
         docker {
-            image '0754631/agk-1st:sfvaimage1'
-	    registryUrl 'https://hub.docker.com/'
-	    registryCredentialsId '37909e5b-3e72-47ff-82de-986cbf3ab573'
+            image 'sfvaimage1'
+	    registry = 0754631/agk-1st
+	    registryCredential = '37909e5b-3e72-47ff-82de-986cbf3ab573'
         }
     }    
     stages { 
