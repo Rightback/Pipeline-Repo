@@ -1,22 +1,26 @@
 pipeline {
-    agent {
-        dockerfile {
-            filename 'Dockerfile'
+    stages {
+	    stage(check) {
+            steps {
+                bash '''
+                    #!/bin/bash
+                    echo "hello world"
+                '''
+            }
         }
-    }    
-    stages { 
         stage('Scan') {
             steps {
-                echo 'Scan Stage'
-                sh 'pwd'
-                sh 'ls -la'
-		sh 'sfdx plugins'
-                sh 'sfdx scanner:run --target "./testfiles/*" --pmdconfig "./rule/apex_rulesett.xml"'
+                echo 'what you doing'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test Stage'
+                echo 'Run Test Suites'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'sfdx help'
             }
         }
     }
