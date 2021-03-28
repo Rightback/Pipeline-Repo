@@ -1,5 +1,7 @@
 pipeline {
-    agent none
+    agent {
+        label AWS2
+    }
     stages {
 	    stage(check) {
             steps {
