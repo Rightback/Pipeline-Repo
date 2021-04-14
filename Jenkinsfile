@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'vasviews/salesforce-dx:1.0.1'}
+        docker { image 'vasviews/salesforce-dx:1.0.2'}
     }
 
     stages {
