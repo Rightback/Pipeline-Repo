@@ -33,8 +33,7 @@ pipeline {
             }
         }
         stage('Authenticate') {
-            steps {
-		withCredentials([file(credentialsId: 'jenkins-ssh-key-for-devhub1', variable: 'SSH_KEY_FOR_DEVHUB')]) {
+	    steps {
 		sh '''
                     #!/bin/bash
 		    INSTANCE_URL="https://login.salesforce.com"
@@ -45,7 +44,6 @@ pipeline {
                    #sfdx auth:jwt:grant --instanceurl $INSTANCE_URL --clientid $CLIENT_ID --username ${SF_USERNAME} --jwtkeyfile $JWT_KEY_FILE --setdefaultdevhubusername --setalias HubOrg
                     echo "Stop Authentication"
                 '''
-                }
             }
         }
     }
