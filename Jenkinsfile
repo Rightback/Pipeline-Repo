@@ -51,10 +51,13 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'sfdx help'
-            }
-        }
     }
+  post {
+      success {
+          mail to:"illinoix@yahoo.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Yay, we passed."
+        }
+      failure {
+          mail to:"illinoix@yahoo.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
+      }
+   }   	
 }
