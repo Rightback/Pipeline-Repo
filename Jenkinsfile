@@ -54,7 +54,7 @@ pipeline {
     }
   post {
       success {
-          mail to:"illinoix@yahoo.com", subject:"SUCCESS: "${currentBuild.fullDisplayName}", body: "Whats next"
+          mail to:"illinoix@yahoo.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Whats next"
         }
       failure {
           mail to:"illinoix@yahoo.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
