@@ -1,8 +1,7 @@
 pipeline {
-    agent {
+    agent { 
          any
     }
-
     stages {
         stage('Scan') {
             steps {
