@@ -1,6 +1,5 @@
 pipeline {
     agent {
-       # docker { image 'vasviews/salesforce-dx:1.0.1'}
          any
     }
 
