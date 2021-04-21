@@ -43,6 +43,8 @@ pipeline {
                     echo "Start Authentication"
                    #sfdx auth:jwt:grant --instanceurl $INSTANCE_URL --clientid $CLIENT_ID --username ${SF_USERNAME} --jwtkeyfile $JWT_KEY_FILE --setdefaultdevhubusername --setalias HubOrg
                     echo "Stop Authentication"
+		    echo $BUILD_USER_ID
+		    echo $BUILD_USER
                 '''
             }
         }
