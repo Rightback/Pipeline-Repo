@@ -1,1 +1,1 @@
-agkjenkinsshared(lic: './force-app/main/default/classes/')
+agkjenkinsshared(agkpipeline.lic: './force-app/main/default/classes/')
