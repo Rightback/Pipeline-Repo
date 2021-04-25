@@ -1,1 +1,1 @@
-agkjenkinsshared(lic: './force-app/main/default/classes/XXX')
+agkjenkinsshared(lic: "./force-app/main/default/classes/XXX")
