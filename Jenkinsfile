@@ -1,2 +1,3 @@
-agkjenkinsshared lic: ./force-app/main/default/classes/
-
+agkjenkinsshared {
+lic = './force-app/main/default/classes/'
+}
